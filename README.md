@@ -1,6 +1,6 @@
 # Real-Time Indian Sign Language (ISL) Recognition System
 
-![ISL Detection Demo](results/isl_demo_3.png)
+![ISL Detection Demo](Screenshot%202025-04-15%20201536.png)
 
 A real-time computer vision system that recognises **36 ISL gestures** (26 alphabets A–Z + digits 0–9) from live webcam feed using MediaPipe hand landmark extraction and a trained neural network classifier.
 
@@ -10,7 +10,11 @@ A real-time computer vision system that recognises **36 ISL gestures** (26 alpha
 
 | Gesture A (1.00) | Gesture 3 (1.00) | Gesture 5 (0.98) | Gesture N (0.98) |
 |---|---|---|---|
-| ![A](results/isl_demo_3.png) | ![3](results/isl_demo_2.png) | ![5](results/isl_demo_10.png) | ![N](results/isl_demo_8.png) |
+| ![A](Screenshot%202025-04-20%20153303.png) | ![3](Screenshot%202025-04-20%20153536.png) | ![5](Screenshot%202025-04-15%20201604.png) | ![N](Screenshot%202025-04-16%20203510.png) |
+
+| Gesture 8 (1.00) | Gesture 2 (0.97) | Gesture F (0.88) | Sign W |
+|---|---|---|---|
+| ![8](Screenshot%202025-04-20%20152729.png) | ![2](Screenshot%202025-04-15%20201517.png) | ![F](Screenshot%202025-04-20%20152942.png) | ![W](Screenshot%202025-04-15%20152034.png) |
 
 Model achieves **0.97–1.00 confidence** on most gestures in real-time webcam testing across varied backgrounds and lighting conditions.
 
@@ -60,39 +64,19 @@ Predicted ISL Gesture + Confidence Score
 
 ---
 
-## Project Structure
-
-```
-ISL-Sign-Language-Recognition/
-├── ISL_Sign_Language_Recognition.ipynb   # Main notebook (data → train → inference)
-├── results/                               # Demo screenshots from live testing
-│   ├── isl_demo_1.png
-│   ├── ...
-├── isl_model_augmented.h5                # Trained model weights
-├── X.npy                                  # Extracted landmark features
-├── y.npy                                  # Labels
-└── README.md
-```
-
----
-
 ## How to Run
 
 ```bash
-# Install dependencies
 pip install tensorflow opencv-python mediapipe numpy scikit-learn matplotlib
-
-# Run the notebook
 jupyter notebook ISL_Sign_Language_Recognition.ipynb
 ```
 
-Dataset should be organised as:
+Dataset folder structure:
 ```
 ISL_Dataset/
-├── A/  (images of ISL sign A)
+├── A/
 ├── B/
 ├── ...
-├── 0/
 └── 9/
 ```
 
@@ -103,14 +87,12 @@ ISL_Dataset/
 | Metric | Value |
 |---|---|
 | Classes | 36 (A–Z, 0–9) |
-| Real-time confidence (most gestures) | 0.97 – 1.00 |
-| Inference | Real-time webcam feed |
+| Real-time confidence | 0.97 – 1.00 |
 | Augmentation | 6× original dataset size |
 
 ---
 
 ## Author
 
-**Vatsala Misra**  
-B.Tech ECE, VIT Bhopal (CGPA: 8.66)  
+**Vatsala Misra** · B.Tech ECE, VIT Bhopal (CGPA: 8.66)  
 [LinkedIn](https://linkedin.com/in/vatsala-misra) · [GitHub](https://github.com/VatsalaMisra)
